@@ -64,7 +64,7 @@ class App extends React.Component {
     //send to debits view via props
     //updates state based off user input
     e.preventDefault()
-    let { credit } = this.state
+    let { credits } = this.state
     let balance = this.state.accountBalance;
 
     const description  = e.target[0].value
@@ -88,6 +88,7 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/debits" element={<Debits addDebit={this.addDebit} debits={this.state.debits} />} />
+          <Route path="/credits" element={<Credits addCredit={this.addCredit} credits={this.state.credits} />} />
         </Routes>
         <h3>{this.state.accountBalance.toFixed(2)}</h3>
       </div>
