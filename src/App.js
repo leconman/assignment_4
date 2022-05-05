@@ -87,9 +87,9 @@ class App extends React.Component {
       <div className="App">
         <h1>Welcome to React Router!</h1>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/debits" element={<Debits addDebit={this.addDebit} debits={this.state.debits} />} />
-          <Route path="/credits" element={<Credits addCredit={this.addCredit} credits={this.state.credits} />} />
+          <Route path="/assignment_4" element={<Home />} />
+          <Route path="/assignment_4/debits" element={<Debits addDebit={this.addDebit} debits={this.state.debits} />} />
+          <Route path="/assignment_4/credits" element={<Credits addCredit={this.addCredit} credits={this.state.credits} />} />
         </Routes>
         <h3>{this.state.accountBalance.toFixed(2)}</h3>
       </div>
@@ -104,8 +104,8 @@ function Home() {
   return (
     <div>
       <h2>Welcome to the homepage!</h2>
-      <Link to="/debits" style = {{padding:5}}>Debits</Link>
-      <Link to="/credits" style = {{padding:5}}>Credits</Link>
+      <Link to="/assignment_4/debits" style = {{padding:5}}>Debits</Link>
+      <Link to="/assignment_4/credits" style = {{padding:5}}>Credits</Link>
     </div>
   );
 }
